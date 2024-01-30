@@ -10,7 +10,7 @@ from Correo_cliente import enviar_cliente
 cont_nombre = 0 
 cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
-path_arch_audi = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_BD'# Cambiar antes de probar!!!!!
+path_arch_audi1 = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Archivos/Auditoria'# Cambiar antes de probar!!!!!
 
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
@@ -48,8 +48,8 @@ if valida_conn_bd:
 
         if valida_datos_bd:
             # Llamada a la función que crea el archivo Excel y se le pasa la variable datos_db del archivo excel_functions.py
-            generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona)
-            
+            generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona, path_arch_audi1)
+
             # Resetear variables al final del código
             datos_bd = None
             itera_nomzona = None

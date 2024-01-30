@@ -1,7 +1,7 @@
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Border, Side
 
-def generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona):
+def generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona, path_arch_audi1):
     # Suponiendo que 'data1' es una lista de listas con los datos
     data1 = {datos_db} # Datos para la primera hoja traidos desde variable de Rocketbot
 
