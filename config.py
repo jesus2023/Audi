@@ -43,7 +43,14 @@ def conectar_base_datos():
 def consultar_base_datos():
     # Intentar conectar a la base de datos
     if conectar_base_datos():
+        
         try:
+            # Crear la cadena de conexión
+            dsn = cx_Oracle.makedsn(DB_HOST, DB_PORT, service_name=DB_SERVICE)
+        
+            # Intentar conectar
+            connection = cx_Oracle.connect(user=DB_USER, password=DB_PASSWORD, dsn=dsn)
+
             # Crear un cursor
             cursor = connection.cursor()
 
@@ -65,3 +72,5 @@ def consultar_base_datos():
         finally:
             # Cerrar el cursor en el bloque finally para asegurar que siempre se cierre
             cursor.close()
+            if 'connection' in locals():
+                connection.close()
