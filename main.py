@@ -5,6 +5,7 @@ from config import conectar_base_datos, consultar_base_datos
 from excel_functions import generar_archivo_excel
 from Correo_soporte import enviar_soporte
 from Correo_cliente import enviar_cliente
+from Correo_soporte2 import enviar_soporte2
 
 # Inicializar variables
 cont_nombre = 0 
@@ -67,3 +68,9 @@ if valida_conn_bd:
 
             # Llamada a la función de enviar_cliente desde Correo_cliente.py
             enviar_cliente()
+else:
+    # Llamada a la función de enviar_soporte desde Correo_soporte2.py    
+    enviar_soporte2()
+    
+    # Llamada a la función de enviar_cliente desde Correo_cliente.py
+    enviar_cliente()
