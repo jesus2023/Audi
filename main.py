@@ -12,7 +12,8 @@ cont_nombre = 0
 cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
 path_arch_audi1 = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Archivos/Auditoria'# Cambiar antes de probar!!!!!
-
+cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTERIA', 'MOGAMBO - ZONA URBANA MONTERIA', 'GRANJA - ZONA URBANA MONTERIA','DORADO - ZONA URBANA MONTERIA','OFIC.PRINCIPAL MONTERIA - ZONA URBANA MONTERIA', 'PUERTO ESCONDIDO - ZONA URBANA MONTERIA', 'SANTA LUCIA - ZONA URBANA MONTERIA', 'SAN ANTERITO - ZONA URBANA MONTERIA', 'CANALETE - ZONA URBANA MONTERIA', 'CARRISAL - ZONA URBANA MONTERIA', 'LOS CORDOBAS - ZONA URBANA MONTERIA']
+noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
 carpeta_a_eliminar_y_crear = 'C:/Users/Deimer Yepes/Downloads/prueba'
@@ -42,6 +43,8 @@ if valida_conn_bd:
         print(f'Error al crear la carpeta: {e}')
 
     for itera_nomzona in cod_zonas:
+
+        # itera los nombres de las zonas
         itera_nomzona = nom_zonas[cont_nombre]
 
         # Verifica la consulta a la base de datos del archivo config.py
@@ -71,6 +74,15 @@ if valida_conn_bd:
 else:
     # Llamada a la función de enviar_soporte desde Correo_soporte2.py    
     enviar_soporte2()
-    
+
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
+
+# Reseteo el contador para volver a usarlo
+cont_nombre = 0
+
+for itera_cods_mont in cod_zonas_mont:
+
+    # itera los nombres de las zonas
+    itera_nom_mont = noms_zonas_mont[cont_nombre]
+    
