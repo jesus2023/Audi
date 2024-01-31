@@ -20,6 +20,7 @@ DB_SERVICE = os.environ.get('DB_SERVICE')
 
 def conectar_base_datos():
     try:
+        
         # Crear la cadena de conexión
         dsn = cx_Oracle.makedsn(DB_HOST, DB_PORT, service_name=DB_SERVICE)
         
@@ -45,12 +46,6 @@ def consultar_base_datos():
     if conectar_base_datos():
         
         try:
-            # Crear la cadena de conexión
-            dsn = cx_Oracle.makedsn(DB_HOST, DB_PORT, service_name=DB_SERVICE)
-        
-            # Intentar conectar
-            connection = cx_Oracle.connect(user=DB_USER, password=DB_PASSWORD, dsn=dsn)
-
             # Crear un cursor
             cursor = connection.cursor()
 
@@ -72,5 +67,31 @@ def consultar_base_datos():
         finally:
             # Cerrar el cursor en el bloque finally para asegurar que siempre se cierre
             cursor.close()
-            if 'connection' in locals():
-                connection.close()
+    
+def consultar_base_datos_2(fecha_ayer_0, itera_cods_mont):
+
+    # Intentar conectar a la base de datos
+    if conectar_base_datos():
+        
+        try:
+            # Crear un cursor
+            cursor = connection.cursor()
+
+            # Ejecutar la consulta SQL
+            sql_query = "select * from SALDOS_TESORERIA where fecha='{fecha_ayer_0}' and codigo_zona='1077' and CENTRO_COSTO='{itera_cods_mont}'"
+            cursor.execute(sql_query)
+            
+            # Obtener los resultados y almacenarlos en una lista de listas
+            datos_db_2 = [list(row) for row in cursor.fetchall()]
+
+            # Devolver True si la consulta fue exitosa
+            return True, datos_db_2
+
+        except cx_Oracle.Error as error:
+            # Manejar la excepción en caso de error en la consulta
+            print(f"Error de consulta: {error}")
+            return False, None
+
+        finally:
+            # Cerrar el cursor en el bloque finally para asegurar que siempre se cierre
+            cursor.close()
