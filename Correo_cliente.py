@@ -5,8 +5,8 @@ from smtplib import SMTPException
 
 def enviar_cliente():
     # Configuración del mensaje y credenciales
-    sender_email = "jesus.suarez@record.com.co"
-    password = "mamona2023"
+    sender_email = "user" # Cambiar las credenciales
+    password = "password" 
 
     # Lista de destinatarios
     recipient_emails = ["jesus.suarez@record.com.co", "anderson.diaz@record.com.co"]
