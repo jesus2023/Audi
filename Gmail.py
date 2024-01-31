@@ -3,6 +3,8 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.application import MIMEApplication
 import smtplib
+import os
+from dotenv import load_dotenv
 
 #Sin embargo, Google no permitirá el inicio de sesión a través de smtplib 
 #porque ha marcado este tipo de inicio de sesión como "menos seguro".
@@ -10,9 +12,13 @@ import smtplib
 #mientras está conectado a su cuenta de Google y a "Permitir aplicaciones menos seguras".
 
 def correo_exitoso():
-    # Configuración del mensaje y credenciales
-    sender_email = "user" # Cambiar las credenciales
-    password = "password" 
+
+    # Carga las variables de entorno desde el archivo email.env
+    load_dotenv("C:\\Users\\Deimer Yepes\\Documents\\Enviroment\\tutorial-env\\email.env")
+
+    # Accede a las variables de entorno
+    sender_email = os.getenv('EMAIL')
+    password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
     recipient_emails = ["jesus.suarez@record.com.co", "anderson.diaz@record.com.co"]
