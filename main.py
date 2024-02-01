@@ -33,6 +33,8 @@ fecha_log = datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
 fecha_ayer_0 = (datetime.now() - timedelta(hours=24)).strftime("%d/%b/%Y")
 fecha_ayer_1 = (datetime.now() - timedelta(hours=24)).strftime("%d-%m-%Y")
 dia = (datetime.now() - timedelta(hours=24)).strftime("%d")
+mes = [datetime.now()-timedelta(hours=24)][0].strftime("%b")
+anio = [datetime.now()-timedelta(hours=24)][0].strftime("%Y")
 
 # Verifica la conexión a la base de datos del archivo config.py
 valida_conn_bd = conectar_base_datos()
