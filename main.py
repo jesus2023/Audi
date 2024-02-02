@@ -1,6 +1,7 @@
 import shutil
 from datetime import datetime, timedelta
 import os
+import sys
 from config import conectar_base_datos, consultar_base_datos, consultar_base_datos_2
 from excel_functions import generar_archivo_excel, generar_archivo_excel_2
 from Correo_soporte import enviar_soporte
@@ -83,6 +84,9 @@ else:
 
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
+
+    # Detiene la ejecución del script
+    sys.exit()
 
 # Reseteo el contador para volver a usarlo
 cont_nombre = 0
