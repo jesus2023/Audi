@@ -19,7 +19,7 @@ cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTER
 noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
-carpeta_a_eliminar_y_crear = 'C:/Users/Deimer Yepes/Downloads/prueba'
+carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Email'
 
 # Intenta eliminar la carpeta y su contenido
 try:
