@@ -88,6 +88,9 @@ else:
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
 
+    # Detiene la ejecución del script
+    sys.exit()
+
 # Reseteo el contador para volver a usarlo
 cont_nombre = 0
 
