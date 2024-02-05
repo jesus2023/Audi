@@ -9,14 +9,14 @@ from dotenv import load_dotenv
 def enviar_soporte2():
 
     # Carga las variables de entorno desde el archivo email.env
-    load_dotenv("C:\\Users\\Deimer Yepes\\Documents\\Enviroment\\tutorial-env\\email.env")
+    load_dotenv("C:/Users/RPA/Desktop/Audi/Gmail/email.env")
 
     # Accede a las variables de entorno
     sender_email = os.getenv('EMAIL')
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["jesus.suarez@record.com.co", "anderson.diaz@record.com.co"]
+    recipient_emails = ["reomir.negrete@record.com.co"] # anexar correos separados por comas
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -27,7 +27,7 @@ def enviar_soporte2():
     msg.attach(MIMEText(message, 'plain'))
 
     # Ruta del archivo Log_Auditoria
-    archivo_a_enviar = "C:/Users/Deimer Yepes/Documents/Pruebas/Log_Auditoria2.txt"
+    archivo_a_enviar = "C:/Users/RPA/Desktop/Audi/Insumos/Log_Auditoria2.txt"
 
     # Adjuntar el archivo al mensaje
     with open(archivo_a_enviar, "rb") as file:

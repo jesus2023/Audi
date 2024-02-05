@@ -1,6 +1,7 @@
 import shutil
 from datetime import datetime, timedelta
 import os
+import sys
 from config import conectar_base_datos, consultar_base_datos, consultar_base_datos_2
 from excel_functions import generar_archivo_excel, generar_archivo_excel_2
 from Correo_soporte import enviar_soporte
@@ -14,12 +15,12 @@ from logs import log_successful, log_fail
 cont_nombre = 0 
 cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
-path_arch_audi1 = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Archivos/Auditoria'# Cambiar antes de probar!!!!!
+path_arch_audi1 = 'C:/Users/RPA/Desktop/Audi/Insumos/Archivos/Auditoría'# Cambiar antes de probar!!!!!
 cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTERIA', 'MOGAMBO - ZONA URBANA MONTERIA', 'GRANJA - ZONA URBANA MONTERIA','DORADO - ZONA URBANA MONTERIA','OFIC.PRINCIPAL MONTERIA - ZONA URBANA MONTERIA', 'PUERTO ESCONDIDO - ZONA URBANA MONTERIA', 'SANTA LUCIA - ZONA URBANA MONTERIA', 'SAN ANTERITO - ZONA URBANA MONTERIA', 'CANALETE - ZONA URBANA MONTERIA', 'CARRISAL - ZONA URBANA MONTERIA', 'LOS CORDOBAS - ZONA URBANA MONTERIA']
 noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
-carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Email'
+carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Desktop/Audi/Insumos/Email'
 
 # Intenta eliminar la carpeta y su contenido
 try:
@@ -80,6 +81,9 @@ if valida_conn_bd:
 else:
     # Llamada a la función de enviar_soporte desde Correo_soporte2.py    
     enviar_soporte2()
+
+    # Detiene la ejecución del script
+    sys.exit()
 
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
