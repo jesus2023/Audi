@@ -3,8 +3,8 @@ import shutil
 
 def copy_files():
     # Rutas de las carpetas origen y destino
-    carpeta_origen = 'C:/Users/Deimer Yepes/Documents/Documentos de prueba' # C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Email
-    carpeta_destino = 'C:/Users/Deimer Yepes/Documents/Documentos de llegada' # G:/Mi unidad/Archivos auditoria
+    carpeta_origen = 'C:/Users/RPA/Desktop/Audi/Email' # C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Email
+    carpeta_destino = 'C:/Users/RPA/Desktop/Audi/Archivos auditoria' # G:/Mi unidad/Archivos auditoria
 
     # Lista de archivos en la carpeta de origen
     archivos = os.listdir(carpeta_origen)

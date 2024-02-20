@@ -1,6 +1,7 @@
 import os
 from dotenv import load_dotenv
 import cx_Oracle
+from datetime import datetime, timedelta
 
 # Declarar connection como una variable global
 connection = None
@@ -9,7 +10,7 @@ connection = None
 cx_Oracle.init_oracle_client(lib_dir=r'C:/instantclient_21_12')
 
 # Especifica la ruta absoluta al directorio que contiene el archivo key.env
-load_dotenv("C:/Users/RPA/Desktop/Audi/conx_bd/conx_bd.py")
+load_dotenv("C:/Users/RPA/Desktop/Audi/conx_bd/gamble.env")
 
 # Accede a las variables con el prefijo DB_
 DB_HOST = os.environ.get('DB_HOST')
@@ -19,6 +20,7 @@ DB_PASSWORD = os.environ.get('DB_PASSWORD')
 DB_SERVICE = os.environ.get('DB_SERVICE')
 
 def conectar_base_datos():
+    global connection
     try:
         
         # Crear la cadena de conexión
@@ -41,7 +43,10 @@ def conectar_base_datos():
         if 'connection' in locals():
             connection.close()
 
-def consultar_base_datos():
+def consultar_base_datos(fecha_ayer_0, itera_codszonas):
+
+    cursor = None
+
     # Intentar conectar a la base de datos
     if conectar_base_datos():
         
@@ -50,7 +55,8 @@ def consultar_base_datos():
             cursor = connection.cursor()
 
             # Ejecutar la consulta SQL
-            sql_query = "SELECT PRS_DOCUMENTO, PORCBEPS FROM CONTRATOSVENTA WHERE FECHAFINAL IS NULL AND PRS_DOCUMENTO IN (1069490257, 1065001847, 1067908542)"
+            sql_query = f"select * from SALDOS_TESORERIA where fecha='{fecha_ayer_0}' and codigo_zona={itera_codszonas}"
+            
             cursor.execute(sql_query)
             
             # Obtener los resultados y almacenarlos en una lista de listas
@@ -66,9 +72,10 @@ def consultar_base_datos():
 
         finally:
             # Cerrar el cursor en el bloque finally para asegurar que siempre se cierre
-            cursor.close()
-    
+            cursor.close()    
 def consultar_base_datos_2(fecha_ayer_0, itera_cods_mont):
+
+    cursor = None
 
     # Intentar conectar a la base de datos
     if conectar_base_datos():
@@ -78,7 +85,7 @@ def consultar_base_datos_2(fecha_ayer_0, itera_cods_mont):
             cursor = connection.cursor()
 
             # Ejecutar la consulta SQL
-            sql_query = "select * from SALDOS_TESORERIA where fecha='{fecha_ayer_0}' and codigo_zona='1077' and CENTRO_COSTO='{itera_cods_mont}'"
+            sql_query = f"select * from SALDOS_TESORERIA where fecha='{fecha_ayer_0}' and codigo_zona='1077' and CENTRO_COSTO='{itera_cods_mont}'"
             cursor.execute(sql_query)
             
             # Obtener los resultados y almacenarlos en una lista de listas

@@ -2,7 +2,7 @@ import os
 
 def log_successful():
     # Ruta específica donde deseas guardar el archivo
-    ruta_especifica = "C:/Users/Deimer Yepes/Documents/Pruebas/"
+    ruta_especifica = "C:/Users/RPA/Desktop/Audi/Pruebas/"
 
     # Nombre del archivo
     nombre_archivo = "Ejecución_Auditoría_BD.txt"
@@ -21,7 +21,7 @@ def log_successful():
 
 def log_fail():
     # Ruta específica donde deseas guardar el archivo
-    ruta_especifica = "C:/Users/Deimer Yepes/Documents/Pruebas/"
+    ruta_especifica = "C:/Users/RPA/Desktop/Audi/Pruebas"
 
     # Nombre del archivo
     nombre_archivo = "Ejecución_Auditoría_BD.txt"

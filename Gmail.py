@@ -14,14 +14,14 @@ from dotenv import load_dotenv
 def correo_exitoso():
 
     # Carga las variables de entorno desde el archivo email.env
-    load_dotenv("C:\\Users\\Deimer Yepes\\Documents\\Enviroment\\tutorial-env\\email.env")
+    load_dotenv("C:/Users/RPA/Desktop/Audi/Gmail/email.env")
 
     # Accede a las variables de entorno
     sender_email = os.getenv('EMAIL')
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["jesus.suarez@record.com.co", "anderson.diaz@record.com.co"]
+    recipient_emails = ["jesus.suarez@record.com.co"]
 
     # Crear instancia del mensaje
     msg = MIMEMultipart()
