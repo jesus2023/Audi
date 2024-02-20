@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 def enviar_soporte():
     
     # Carga las variables de entorno desde el archivo email.env
-    load_dotenv("C:\\Users\\Deimer Yepes\\Documents\\Enviroment\\tutorial-env\\email.env")
+    load_dotenv("C:/Users/RPA/Desktop/Audi/Gmail/email.env")
 
     # Accede a las variables de entorno
     sender_email = os.getenv('EMAIL')
