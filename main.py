@@ -76,7 +76,6 @@ if valida_conn_bd:
         else:
             # Llamada a la función de enviar_soporte desde Correo_soporte.py
             enviar_soporte()
-
             # Llamada a la función de enviar_cliente desde Correo_cliente.py
             enviar_cliente()
 else:
