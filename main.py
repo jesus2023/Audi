@@ -1,3 +1,4 @@
+import logging
 import shutil
 from datetime import datetime, timedelta
 import os
@@ -11,14 +12,32 @@ from Copy_files import copy_files
 from Gmail import correo_exitoso
 from logs import log_successful, log_fail
 
+# Niveles del módulo loggin
+# DEBUG = 10
+# INFO = 20
+# WARNING = 30
+# ERROR = 40
+# CRITICAL = 50
+
+# Inicio del logger
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
+# Configuración básica del logger.
+# Ruta de guardado del log, nivel desde el cual se imprimirá la ejecución y formato de registro en el log.
+logging.basicConfig(filename=f'C:/Users/RPA/Desktop/Audi/logs/log_file_Auditoría_{timestamp}.log',level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+
+logging.info('Bot_Auditoría_BD_Python iniciado')
+
 # Inicializar variables
 cont_nombre = 0
 path_arch_audi1 = 'C:/Users/RPA/Desktop/Audi/Insumos/Archivos/Auditoría'# Cambiar antes de probar!!!!!
-path_carp_email = 'C:/Users/R..PA/Desktop/Audi/Insumos/Email/Auditoría'
+path_carp_email = 'C:/Users/RPA/Desktop/Audi/Insumos/Email/Auditoría'
 cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTERIA', 'MOGAMBO - ZONA URBANA MONTERIA', 'GRANJA - ZONA URBANA MONTERIA','DORADO - ZONA URBANA MONTERIA','OFIC.PRINCIPAL MONTERIA - ZONA URBANA MONTERIA', 'PUERTO ESCONDIDO - ZONA URBANA MONTERIA', 'SANTA LUCIA - ZONA URBANA MONTERIA', 'SAN ANTERITO - ZONA URBANA MONTERIA', 'CANALETE - ZONA URBANA MONTERIA', 'CARRISAL - ZONA URBANA MONTERIA', 'LOS CORDOBAS - ZONA URBANA MONTERIA']
 noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
 nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
+
+logging.info('Variables inicializadas')
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
 carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Desktop/Audi/Insumos/Email'
@@ -27,8 +46,12 @@ carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Desktop/Audi/Insumos/Email'
 try:
     shutil.rmtree(carpeta_a_eliminar_y_crear)
     print(f'Carpeta {carpeta_a_eliminar_y_crear} eliminada con éxito.')
+    logging.info('Carpeta email eliminada')
+
 except OSError as e:
     print(f'Error al eliminar la carpeta: {e}')
+    logging.warning('Carpeta Email inexistente')
+
 
 # Obtén las fechas
 fecha_log = datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
@@ -42,12 +65,18 @@ anio = [datetime.now()-timedelta(hours=24)][0].strftime("%Y")
 valida_conn_bd = conectar_base_datos()
 
 if valida_conn_bd:
+
+    logging.info('Conectado a la base de datos')
+    
     # Intenta crear la carpeta
     try:
         os.makedirs(carpeta_a_eliminar_y_crear)
         print(f'Carpeta {carpeta_a_eliminar_y_crear} creada con éxito.')
+        logging.info('Carpeta Email creda con exito')
+
     except OSError as e:
         print(f'Error al crear la carpeta: {e}')
+        logging.warning('Carpeta Email no creada')
 
     for itera_codszonas in cod_zonas:
 
@@ -63,7 +92,7 @@ if valida_conn_bd:
             generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona, path_arch_audi1, path_carp_email)
 
             # Resetear variables al final del código
-            datos_bd = None
+            datos_db = None
             itera_nomzona = None
             abre_audi = None
             num_filas = None
@@ -75,12 +104,15 @@ if valida_conn_bd:
             cont_nombre = cont_nombre + 1
         else:
             # Llamada a la función de enviar_soporte desde Correo_soporte.py
-            enviar_soporte()
+            enviar_soporte(timestamp)
             # Llamada a la función de enviar_cliente desde Correo_cliente.py
             enviar_cliente()
 else:
+
+    logging.error('Error al conectarse a la base de datos')
+
     # Llamada a la función de enviar_soporte desde Correo_soporte2.py    
-    enviar_soporte2()
+    enviar_soporte2(timestamp)
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
 
@@ -104,7 +136,7 @@ for itera_cods_mont in cod_zonas_mont:
         generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_audi1, path_carp_email)
 
         # Resetear variables al final del código
-        datos_bd2 = None
+        datos_db_2 = None
         itera_nom_mont = None
         abre_audi = None
         num_filas = None
@@ -119,18 +151,20 @@ for itera_cods_mont in cod_zonas_mont:
 
     else:
 
+        logging.error('Error al conectarse a la base de datos')
         # Llamada a la función de enviar_soporte desde Correo_soporte.py
-        enviar_soporte()
-
+        enviar_soporte(timestamp)
         # Llamada a la función de enviar_cliente desde Correo_cliente.py
         enviar_cliente()
 
+
 # Copiar archivos a Drive
 copy_files()
-
+logging.info('Archivos copiados')
 try:
     correo_exitoso()
     log_successful()
-
+    logging.info('Archivos copiados')
 except Exception as e:
     log_fail()
+    logging.error('Error al envio de correo exitoso')

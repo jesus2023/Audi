@@ -4,6 +4,7 @@ import smtplib
 from smtplib import SMTPException
 import os
 from dotenv import load_dotenv
+import logging
 
 def enviar_cliente():
 
@@ -34,5 +35,7 @@ def enviar_cliente():
             server.login(sender_email, password)
             server.sendmail(sender_email, recipient_emails, msg.as_string())
             print(f"Correo electrónico enviado a {recipient_emails}")
+            logging.error(f'Correo enviado a {recipient_emails}')
         except SMTPException as e:
             print(f"Error durante el envío del correo: {e}")
+            logging.error('Correo no enviado')

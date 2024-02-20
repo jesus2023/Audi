@@ -5,6 +5,7 @@ from email.mime.application import MIMEApplication
 import smtplib
 import os
 from dotenv import load_dotenv
+import logging
 
 #Sin embargo, Google no permitirá el inicio de sesión a través de smtplib 
 #porque ha marcado este tipo de inicio de sesión como "menos seguro".
@@ -94,5 +95,7 @@ def correo_exitoso():
             server.login(sender_email, password)
             server.sendmail(sender_email, recipient_emails, msg.as_string())
             print(f"Correo electrónico con archivos adjuntos y formato HTML enviado exitosamente a {recipient_emails}")
+            logging.info('Correo con archivos adjuntos enviados')
         except Exception as e:
             print(f"Error: {e}")
+            logging.error('Correo no enviado')

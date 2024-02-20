@@ -1,5 +1,6 @@
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Border, Side
+import logging
 
 def generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona, path_arch_audi1, path_carp_email):
     # Suponiendo que 'data1' es una lista de listas con los datos
@@ -57,7 +58,7 @@ def generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona, path_arch_audi1
     # Guardar el libro de Excel en ruta dependiendo la condición
     wb.save(f"{path_arch_audi1}_{fecha_ayer_1}_{itera_nomzona}.xlsx")
     wb.save(f"{path_carp_email}_{fecha_ayer_1}_{itera_nomzona}.xlsx")
-
+    logging.info(f'Archivo: {path_carp_email}_{fecha_ayer_1}_{itera_nomzona}.xlsx creado.')
 
 def generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_audi1, path_carp_email):
     # Suponiendo que 'data1' es una lista de listas con los datos
@@ -115,5 +116,5 @@ def generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_
 
     wb.save(f"{path_arch_audi1}_{fecha_ayer_1}_{itera_nom_mont}.xlsx")
     wb.save(f"{path_carp_email}_{fecha_ayer_1}_{itera_nom_mont}.xlsx")
-
+    logging.info(f'Archivo: {path_carp_email}_{fecha_ayer_1}_{itera_nom_mont}.xlsx creado.')
 
