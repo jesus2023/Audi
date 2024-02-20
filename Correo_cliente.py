@@ -15,7 +15,7 @@ def enviar_cliente():
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["jesus.suarez@record.com.co"]
+    recipient_emails = ["soporte.rpa@record.com.co"]
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
