@@ -12,13 +12,13 @@ from Gmail import correo_exitoso
 from logs import log_successful, log_fail
 
 # Inicializar variables
-cont_nombre = 0 
-cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
-nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
+cont_nombre = 0
 path_arch_audi1 = 'C:/Users/RPA/Desktop/Audi/Insumos/Archivos/Auditoría'# Cambiar antes de probar!!!!!
 path_carp_email = 'C:/Users/R..PA/Desktop/Audi/Insumos/Email/Auditoría'
+cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTERIA', 'MOGAMBO - ZONA URBANA MONTERIA', 'GRANJA - ZONA URBANA MONTERIA','DORADO - ZONA URBANA MONTERIA','OFIC.PRINCIPAL MONTERIA - ZONA URBANA MONTERIA', 'PUERTO ESCONDIDO - ZONA URBANA MONTERIA', 'SANTA LUCIA - ZONA URBANA MONTERIA', 'SAN ANTERITO - ZONA URBANA MONTERIA', 'CANALETE - ZONA URBANA MONTERIA', 'CARRISAL - ZONA URBANA MONTERIA', 'LOS CORDOBAS - ZONA URBANA MONTERIA']
 noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
+nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
 carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Desktop/Audi/Insumos/Email'
