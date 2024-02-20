@@ -21,13 +21,13 @@ def enviar_soporte():
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = ", ".join(recipient_emails)
-    msg['Subject'] = "Error en la ejecución del Bot Auditoria BD, log generado."
+    msg['Subject'] = "Error en la ejecución del Bot Auditoria BD Python, log generado."
 
     message = "Ha ocurrido un error con en la ejecución del Bot Auditoría BD, por favor valide el log generado."
     msg.attach(MIMEText(message, 'plain'))
 
     # Ruta del archivo Log_Auditoria
-    archivo_a_enviar = "C:/Users/Deimer Yepes/Documents/Pruebas/Log_Auditoria.txt"
+    archivo_a_enviar = "C:/Users/RPA/Desktop/Audi/Log_Auditoría_BD_Python.txt"
 
     # Adjuntar el archivo al mensaje
     with open(archivo_a_enviar, "rb") as file:

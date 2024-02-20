@@ -16,7 +16,7 @@ def enviar_soporte2():
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["reomir.negrete@record.com.co"] # anexar correos separados por comas
+    recipient_emails = ["soporte.rpa@record.com.co"] # anexar correos separados por comas
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -27,7 +27,7 @@ def enviar_soporte2():
     msg.attach(MIMEText(message, 'plain'))
 
     # Ruta del archivo Log_Auditoria
-    archivo_a_enviar = "C:/Users/RPA/Desktop/Audi/Insumos/Log_Auditoria2.txt"
+    archivo_a_enviar = "C:/Users/RPA/Desktop/Audi/Log_Auditoría_BD_Python.txt"
 
     # Adjuntar el archivo al mensaje
     with open(archivo_a_enviar, "rb") as file:

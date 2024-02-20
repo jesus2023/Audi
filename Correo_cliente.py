@@ -15,7 +15,7 @@ def enviar_cliente():
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["soporte.rpa@record.com.co"]
+    recipient_emails = ["jhovanna.lopez@record.com.co"]
 
     msg = MIMEMultipart()
     msg['From'] = sender_email
@@ -33,6 +33,6 @@ def enviar_cliente():
         try:
             server.login(sender_email, password)
             server.sendmail(sender_email, recipient_emails, msg.as_string())
-            print("Correo electrónico enviado con éxito.")
+            print(f"Correo electrónico enviado a {recipient_emails}")
         except SMTPException as e:
             print(f"Error durante el envío del correo: {e}")

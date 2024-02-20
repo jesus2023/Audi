@@ -82,10 +82,6 @@ if valida_conn_bd:
 else:
     # Llamada a la función de enviar_soporte desde Correo_soporte2.py    
     enviar_soporte2()
-
-    # Detiene la ejecución del script
-    sys.exit()
-
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
 

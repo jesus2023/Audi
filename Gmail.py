@@ -27,7 +27,7 @@ def correo_exitoso():
     msg = MIMEMultipart()
     msg['From'] = sender_email
     msg['To'] = ", ".join(recipient_emails)
-    msg['Subject'] = "Archivos adjuntos"
+    msg['Subject'] = "Bot Auditoría BD Python ejecutado exitosamente"
 
     # Mensaje en formato HTML
     html_content = """
