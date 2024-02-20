@@ -16,7 +16,7 @@ cont_nombre = 0
 cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', 'LORICA', 'SAHAGUN']
 path_arch_audi1 = 'C:/Users/RPA/Desktop/Audi/Insumos/Archivos/Auditoría'# Cambiar antes de probar!!!!!
-path_carp_email = 'C:/Users/RPA/Desktop/Audi/Insumos/Email/Auditoría'
+path_carp_email = 'C:/Users/R..PA/Desktop/Audi/Insumos/Email/Auditoría'
 cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTERIA', 'MOGAMBO - ZONA URBANA MONTERIA', 'GRANJA - ZONA URBANA MONTERIA','DORADO - ZONA URBANA MONTERIA','OFIC.PRINCIPAL MONTERIA - ZONA URBANA MONTERIA', 'PUERTO ESCONDIDO - ZONA URBANA MONTERIA', 'SANTA LUCIA - ZONA URBANA MONTERIA', 'SAN ANTERITO - ZONA URBANA MONTERIA', 'CANALETE - ZONA URBANA MONTERIA', 'CARRISAL - ZONA URBANA MONTERIA', 'LOS CORDOBAS - ZONA URBANA MONTERIA']
 noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
 
@@ -106,7 +106,7 @@ for itera_cods_mont in cod_zonas_mont:
     if valida_datos_bd2:
 
         # Llamada a la función que crea el archivo Excel y se le pasa la variable datos_db_2 del archivo excel_functions.py
-        generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_audi1)
+        generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_audi1, path_carp_email)
 
         # Resetear variables al final del código
         datos_bd2 = None

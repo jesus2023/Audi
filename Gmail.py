@@ -21,7 +21,7 @@ def correo_exitoso():
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["jesus.suarez@record.com.co"]
+    recipient_emails = ["soporte.rpa@record.com.co"]
 
     # Crear instancia del mensaje
     msg = MIMEMultipart()
@@ -73,7 +73,7 @@ def correo_exitoso():
     msg.attach(MIMEText(html_content, 'html'))
 
     # Carpeta que contiene los archivos que deseas adjuntar
-    carpeta_con_archivos = "C:/Users/Deimer Yepes/Documents/Documentos de prueba"  # Cambiar la ruta por la solicitada
+    carpeta_con_archivos = "C:/Users/RPA/Desktop/Audi/Insumos/Email"  # Cambiar la ruta por la solicitada
 
     # Obtener la lista de archivos en la carpeta
     archivos_en_carpeta = os.listdir(carpeta_con_archivos)

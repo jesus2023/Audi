@@ -59,7 +59,7 @@ def generar_archivo_excel(datos_db, fecha_ayer_1, itera_nomzona, path_arch_audi1
     wb.save(f"{path_carp_email}_{fecha_ayer_1}_{itera_nomzona}.xlsx")
 
 
-def generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_audi1):
+def generar_archivo_excel_2(datos_db_2, fecha_ayer_1, itera_nom_mont, path_arch_audi1, path_carp_email):
     # Suponiendo que 'data1' es una lista de listas con los datos
     data1 = datos_db_2 # Datos para la primera hoja traidos desde variable de Rocketbot
 
