@@ -15,7 +15,7 @@ import logging
 def correo_exitoso():
 
     # Carga las variables de entorno desde el archivo email.env
-    load_dotenv("C:/Users/RPA/Desktop/Audi/Gmail/email.env")
+    load_dotenv("C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Gmail/email.env")
 
     # Accede a las variables de entorno
     sender_email = os.getenv('EMAIL')
@@ -62,7 +62,7 @@ def correo_exitoso():
         </style>
     </head>
     <body>
-        <p class="mensaje">Bot Auditoria_BD: Saldo tesorería ejecutado exitosamente</p><br><br>
+        <p class="mensaje">Bot Auditoria_BD_Python: Saldo tesorería ejecutado exitosamente</p><br><br>
         <div class="bot"><img src="http://revistafibra.info/wp-content/uploads/2015/12/bottraffic.jpg" alt="bot"></div>
         <p class="slogan">"Lo hacemos fácil para hacerte feliz en donde quiera que estés"</p>
         <p class="firma">RPA - RECORD</p>
@@ -74,7 +74,7 @@ def correo_exitoso():
     msg.attach(MIMEText(html_content, 'html'))
 
     # Carpeta que contiene los archivos que deseas adjuntar
-    carpeta_con_archivos = "C:/Users/RPA/Desktop/Audi/Insumos/Email"  # Cambiar la ruta por la solicitada
+    carpeta_con_archivos = "C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email"  # Cambiar la ruta por la solicitada
 
     # Obtener la lista de archivos en la carpeta
     archivos_en_carpeta = os.listdir(carpeta_con_archivos)

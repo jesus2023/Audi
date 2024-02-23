@@ -9,14 +9,14 @@ import logging
 def enviar_cliente():
 
     # Carga las variables de entorno desde el archivo email.env
-    load_dotenv("C:/Users/RPA/Desktop/Audi/Gmail/email.env")
+    load_dotenv("C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Gmail/email.env")
 
     # Accede a las variables de entorno
     sender_email = os.getenv('EMAIL')
     password = os.getenv('PASSWORD')
 
     # Lista de destinatarios
-    recipient_emails = ["jhovanna.lopez@record.com.co"]
+    recipient_emails = ["pruebasbot21@gmail.com"]
 
     msg = MIMEMultipart()
     msg['From'] = sender_email

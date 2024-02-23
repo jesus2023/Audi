@@ -2,10 +2,10 @@ import os
 
 def log_successful():
     # Ruta específica donde deseas guardar el archivo
-    ruta_especifica = "C:/Users/RPA/Desktop/Audi/Pruebas/"
+    ruta_especifica = "C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python"
 
     # Nombre del archivo
-    nombre_archivo = "Ejecución_Auditoría_BD.txt"
+    nombre_archivo = "Log_Auditoría_BD_Python.txt"
 
     # Ruta completa del archivo
     ruta_completa = os.path.join(ruta_especifica, nombre_archivo)
@@ -21,10 +21,10 @@ def log_successful():
 
 def log_fail():
     # Ruta específica donde deseas guardar el archivo
-    ruta_especifica = "C:/Users/RPA/Desktop/Audi/Pruebas"
+    ruta_especifica = "C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python"
 
     # Nombre del archivo
-    nombre_archivo = "Ejecución_Auditoría_BD.txt"
+    nombre_archivo = "Log_Auditoría_BD_Python.txt"
 
     # Ruta completa del archivo
     ruta_completa = os.path.join(ruta_especifica, nombre_archivo)

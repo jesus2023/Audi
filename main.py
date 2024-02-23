@@ -1,16 +1,17 @@
-import logging
-import shutil
-from datetime import datetime, timedelta
 import os
 import sys
-from config import conectar_base_datos, consultar_base_datos, consultar_base_datos_2
-from excel_functions import generar_archivo_excel, generar_archivo_excel_2
-from Correo_soporte import enviar_soporte
-from Correo_soporte2 import enviar_soporte2
-from Correo_cliente import enviar_cliente
-from Copy_files import copy_files
+import time
+import shutil
+import logging
 from Gmail import correo_exitoso
+from Copy_files import copy_files
+from datetime import datetime, timedelta
+from Correo_soporte import enviar_soporte
+from Correo_cliente import enviar_cliente
 from logs import log_successful, log_fail
+from Correo_soporte2 import enviar_soporte2
+from excel_functions import generar_archivo_excel, generar_archivo_excel_2
+from config import conectar_base_datos, consultar_base_datos, consultar_base_datos_2
 
 # Niveles del módulo loggin
 # DEBUG = 10
@@ -24,14 +25,16 @@ timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 # Configuración básica del logger.
 # Ruta de guardado del log, nivel desde el cual se imprimirá la ejecución y formato de registro en el log.
-logging.basicConfig(filename=f'C:/Users/RPA/Desktop/Audi/logs/log_file_Auditoría_{timestamp}.log',level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(filename=f'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/logs/log_file_Auditoría_{timestamp}.log',level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 logging.info('Bot_Auditoría_BD_Python iniciado')
 
+tiempo_inicio = time.time()
+
 # Inicializar variables
 cont_nombre = 0
-path_arch_audi1 = 'C:/Users/RPA/Desktop/Audi/Insumos/Archivos/Auditoría'# Cambiar antes de probar!!!!!
-path_carp_email = 'C:/Users/RPA/Desktop/Audi/Insumos/Email/Auditoría'
+path_arch_audi1 = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Archivos/Auditoría'# Cambiar antes de probar!!!!!
+path_carp_email = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría'
 cod_zonas = ['1692', '1708', '1409', '1390', '1431', '1696', '1703']
 cod_zonas_mont = ['MOCARI - ZONA URBANA MONTERIA', 'PRADERA - ZONA URBANA MONTERIA', 'MOGAMBO - ZONA URBANA MONTERIA', 'GRANJA - ZONA URBANA MONTERIA','DORADO - ZONA URBANA MONTERIA','OFIC.PRINCIPAL MONTERIA - ZONA URBANA MONTERIA', 'PUERTO ESCONDIDO - ZONA URBANA MONTERIA', 'SANTA LUCIA - ZONA URBANA MONTERIA', 'SAN ANTERITO - ZONA URBANA MONTERIA', 'CANALETE - ZONA URBANA MONTERIA', 'CARRISAL - ZONA URBANA MONTERIA', 'LOS CORDOBAS - ZONA URBANA MONTERIA']
 noms_zonas_mont = ['MOCARI', 'PRADERA', 'MOGAMBO', 'GRANJA','DORADO', 'OFIC.PRINCIPAL MONTERIA', 'PUERTO ESCONDIDO', 'SANTA LUCIA', 'SAN ANTERITO', 'CANALETE', 'CARRISAL', 'LOS CORDOBAS']
@@ -40,7 +43,7 @@ nom_zonas = ['MONTELIBANO', 'TIERRA-ALTA', 'AYAPEL', 'PLANETA-RICA', 'CERETE', '
 logging.info('Variables inicializadas')
 
 # Especifica la ruta de la carpeta que deseas eliminar y crear
-carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Desktop/Audi/Insumos/Email'
+carpeta_a_eliminar_y_crear = 'C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email'
 
 # Intenta eliminar la carpeta y su contenido
 try:
@@ -160,11 +163,17 @@ for itera_cods_mont in cod_zonas_mont:
 
 # Copiar archivos a Drive
 copy_files()
-logging.info('Archivos copiados')
 try:
     correo_exitoso()
     log_successful()
-    logging.info('Archivos copiados')
+    
+    logging.info('Archivos copiados en GDrive y carpeta Email')     
+    logging.info(f'Bot_Auditoría_BD_Python Finalizado.')
+
+    tiempo_fin = time.time()
+    tiempo_ejecucion = tiempo_fin - tiempo_inicio
+    logging.info(f'Tiempo total de ejecución: {tiempo_ejecucion}')
+
 except Exception as e:
     log_fail()
-    logging.error('Error al envio de correo exitoso')
+    logging.error('Error al enviar el correo de éxito')

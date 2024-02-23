@@ -12,7 +12,7 @@ from datetime import datetime, timedelta
 def enviar_soporte2(timestamp):
 
     # Carga las variables de entorno desde el archivo email.env
-    load_dotenv("C:/Users/RPA/Desktop/Audi/Gmail/email.env")
+    load_dotenv("C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Gmail/email.env")
 
     # Accede a las variables de entorno
     sender_email = os.getenv('EMAIL')
@@ -30,7 +30,7 @@ def enviar_soporte2(timestamp):
     msg.attach(MIMEText(message, 'plain'))
 
     # Ruta del archivo Log_Auditoria
-    archivo_a_enviar = (f"C:/Users/RPA/Desktop/Audi/logs/log_file_Auditoría_{timestamp}.log")
+    archivo_a_enviar = (f"C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/logs/log_file_Auditoría_{timestamp}.log")
 
     # Adjuntar el archivo al mensaje
     with open(archivo_a_enviar, "rb") as file:
