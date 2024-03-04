@@ -1,0 +1,26 @@
+2024-02-27 14:40:08,987 - INFO - Bot_Auditoría_BD_Python iniciado
+2024-02-27 14:40:08,987 - INFO - Variables inicializadas
+2024-02-27 14:40:09,001 - INFO - Carpeta email eliminada
+2024-02-27 14:40:09,648 - INFO - Conectado a la base de datos
+2024-02-27 14:40:09,649 - INFO - Carpeta Email creda con exito
+2024-02-27 14:40:10,733 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_MONTELIBANO.xlsx creado.
+2024-02-27 14:40:11,657 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_TIERRA-ALTA.xlsx creado.
+2024-02-27 14:40:12,528 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_AYAPEL.xlsx creado.
+2024-02-27 14:40:13,596 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_PLANETA-RICA.xlsx creado.
+2024-02-27 14:40:14,978 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_CERETE.xlsx creado.
+2024-02-27 14:40:16,225 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_LORICA.xlsx creado.
+2024-02-27 14:40:17,547 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_SAHAGUN.xlsx creado.
+2024-02-27 14:40:18,594 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_MOCARI.xlsx creado.
+2024-02-27 14:40:19,884 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_PRADERA.xlsx creado.
+2024-02-27 14:40:21,067 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_MOGAMBO.xlsx creado.
+2024-02-27 14:40:22,242 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_GRANJA.xlsx creado.
+2024-02-27 14:40:23,401 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_DORADO.xlsx creado.
+2024-02-27 14:40:24,704 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_OFIC.PRINCIPAL MONTERIA.xlsx creado.
+2024-02-27 14:40:25,573 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_PUERTO ESCONDIDO.xlsx creado.
+2024-02-27 14:40:26,498 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_SANTA LUCIA.xlsx creado.
+2024-02-27 14:40:27,337 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_SAN ANTERITO.xlsx creado.
+2024-02-27 14:40:28,272 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_CANALETE.xlsx creado.
+2024-02-27 14:40:29,198 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_CARRISAL.xlsx creado.
+2024-02-27 14:40:30,094 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_26-02-2024_LOS CORDOBAS.xlsx creado.
+2024-02-27 14:40:41,190 - INFO - "GET /?state=oDsucKEtqqb15nO3CD4iezwIhvgmwV&code=4/0AeaYSHDuAZ_l1SFUIUGjsjvUR2DIt0ylJhP1PLlnEnU68dAf-w35vlI7VbNfg0KB_mxv2w&scope=https://www.googleapis.com/auth/gmail.send HTTP/1.1" 200 65
+2024-02-27 14:40:42,312 - ERROR - Error al enviar el correo de éxito

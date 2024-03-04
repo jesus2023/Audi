@@ -7,10 +7,10 @@ from datetime import datetime, timedelta
 connection = None
 
 # Apuntar a la instalación del cliente Oracle
-cx_Oracle.init_oracle_client(lib_dir=r'C:/instantclient_21_12')
+cx_Oracle.init_oracle_client(lib_dir=r'C:/instantclient_21_13 x64')
 
 # Especifica la ruta absoluta al directorio que contiene el archivo key.env
-load_dotenv("C:/Users/RPA/Desktop/Audi/conx_bd/gamble.env")
+load_dotenv("C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/conx_bd/R1_HCI.env")
 
 # Accede a las variables con el prefijo DB_
 DB_HOST = os.environ.get('DB_HOST')

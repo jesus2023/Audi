@@ -3,11 +3,11 @@ import sys
 import time
 import shutil
 import logging
-from Gmail import correo_exitoso
+from Email import enviar_cliente
 from Copy_files import copy_files
+from Email_exito import correo_exitoso
+from Email_soporte import enviar_soporte
 from datetime import datetime, timedelta
-from Correo_soporte import enviar_soporte
-from Correo_cliente import enviar_cliente
 from logs import log_successful, log_fail
 from Correo_soporte2 import enviar_soporte2
 from excel_functions import generar_archivo_excel, generar_archivo_excel_2

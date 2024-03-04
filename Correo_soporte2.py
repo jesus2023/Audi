@@ -50,3 +50,5 @@ def enviar_soporte2(timestamp):
         except Exception as e:
             print(f"Error: {e}")
             logging.error('Correo no enviado')
+
+
