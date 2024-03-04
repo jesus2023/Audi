@@ -89,7 +89,7 @@ def correo_exitoso():
 
     # Detalles del mensaje
     to_email = "reomir.negrete@record.com.co, jhovanna.lopez@record.com.co"
-    cc_email = "carlos.perez@record.com.co"
+    cc_email = "kevis.mercado@record.com.co"
     bcc_email = "soporte.rpa@record.com.co"
     email_subject = "Bot Auditoria Python Ejecutado exitosamente"   
     

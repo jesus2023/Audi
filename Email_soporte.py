@@ -66,7 +66,7 @@ def enviar_soporte(timestamp):
     service = build('gmail', 'v1', credentials=creds)
 
     # Detalles del mensaje
-    to_email = "reomir.negrete@record.com.co"
+    to_email = "soporte.rpa@record.com.co"
     email_subject = "Error en la ejecución del Bot Auditoria BD Python, log generado."
     email_body = "Ha ocurrido un error con en la ejecución del Bot Auditoría BD, por favor valide el log generado."
     attachment_path = (f"C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/logs/log_file_Auditoría_{timestamp}.log")  # Reemplaza con la ruta del archivo que deseas adjuntar

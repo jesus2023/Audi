@@ -1,0 +1,8 @@
+2024-03-04 15:30:33,516 - INFO - Bot_Auditoría_BD_Python iniciado
+2024-03-04 15:30:33,518 - INFO - Variables inicializadas
+2024-03-04 15:30:33,527 - WARNING - Carpeta Email inexistente
+2024-03-04 15:30:34,386 - ERROR - Error al conectarse a la base de datos
+2024-03-04 15:30:34,404 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-03-04 15:30:35,293 - ERROR - Correo enviado a reomir.negrete@record.com.co
+2024-03-04 15:30:35,299 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-03-04 15:30:35,794 - INFO - Correo enviado a reomir.negrete@record.com.co

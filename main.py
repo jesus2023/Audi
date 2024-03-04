@@ -9,7 +9,6 @@ from Email_exito import correo_exitoso
 from Email_soporte import enviar_soporte
 from datetime import datetime, timedelta
 from logs import log_successful, log_fail
-from Correo_soporte2 import enviar_soporte2
 from excel_functions import generar_archivo_excel, generar_archivo_excel_2
 from config import conectar_base_datos, consultar_base_datos, consultar_base_datos_2
 
@@ -115,7 +114,7 @@ else:
     logging.error('Error al conectarse a la base de datos')
 
     # Llamada a la función de enviar_soporte desde Correo_soporte2.py    
-    enviar_soporte2(timestamp)
+    enviar_soporte(timestamp)
     # Llamada a la función de enviar_cliente desde Correo_cliente.py
     enviar_cliente()
 
