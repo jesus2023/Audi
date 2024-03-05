@@ -54,9 +54,9 @@ def enviar_cliente():
     service = build('gmail', 'v1', credentials=creds)
 
     # Detalles del mensaje
-    to_email = "jesus.suarez@record.com.co"
-    email_subject = "Error en la ejecucion del Bot Auditoria BD"
-    email_body = "Ha ocurrido un error con la ejecución del Bot Auditoria BD, por favor realice el proceso de consulta y generación de archivos de forma manual."
+    to_email = "soporte.rpa@record.com.co, jesus.suarez@record.com.co, carlos.perez@record.com.co"
+    email_subject = "Error en la ejecucion del Bot Auditoria BD Python"
+    email_body = "Ha ocurrido un error con la ejecución del Bot Auditoria BD Python, por favor realice el proceso de consulta y generación de archivos de forma manual."
 
     send_message(service, SENDER_EMAIL, to_email, email_subject, email_body)
     logging.info(f'Correo enviado a {to_email}')

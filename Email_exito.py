@@ -88,10 +88,10 @@ def correo_exitoso():
     service = build('gmail', 'v1', credentials=creds)
 
     # Detalles del mensaje
-    to_email = "reomir.negrete@record.com.co, jhovanna.lopez@record.com.co"
-    cc_email = "kevis.mercado@record.com.co"
+    to_email = "berthy.petro@record.com.co, mario.martinez@record.com.co, auditplay@record.com.co"
+    cc_email = "carlos.perez@record.com.co"
     bcc_email = "soporte.rpa@record.com.co"
-    email_subject = "Bot Auditoria Python Ejecutado exitosamente"   
+    email_subject = "Bot Auditoria_BD: Saldo tesorería ejecutado exitosamente"   
     
     # Contenido HTML
     email_body =  """

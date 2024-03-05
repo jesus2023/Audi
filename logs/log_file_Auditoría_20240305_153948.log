@@ -1,0 +1,29 @@
+2024-03-05 15:39:48,085 - INFO - Bot_Auditoría_BD_Python iniciado
+2024-03-05 15:39:48,085 - INFO - Variables inicializadas
+2024-03-05 15:39:48,087 - WARNING - Carpeta Email inexistente
+2024-03-05 15:39:48,838 - INFO - Conectado a la base de datos
+2024-03-05 15:39:48,841 - INFO - Carpeta Email creda con exito
+2024-03-05 15:39:50,054 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_MONTELIBANO.xlsx creado.
+2024-03-05 15:39:51,025 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_TIERRA-ALTA.xlsx creado.
+2024-03-05 15:39:51,923 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_AYAPEL.xlsx creado.
+2024-03-05 15:39:53,115 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_PLANETA-RICA.xlsx creado.
+2024-03-05 15:39:54,416 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_CERETE.xlsx creado.
+2024-03-05 15:39:55,669 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_LORICA.xlsx creado.
+2024-03-05 15:39:56,885 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_SAHAGUN.xlsx creado.
+2024-03-05 15:39:57,987 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_MOCARI.xlsx creado.
+2024-03-05 15:39:59,192 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_PRADERA.xlsx creado.
+2024-03-05 15:40:00,434 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_MOGAMBO.xlsx creado.
+2024-03-05 15:40:01,537 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_GRANJA.xlsx creado.
+2024-03-05 15:40:02,738 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_DORADO.xlsx creado.
+2024-03-05 15:40:04,063 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_OFIC.PRINCIPAL MONTERIA.xlsx creado.
+2024-03-05 15:40:04,993 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_PUERTO ESCONDIDO.xlsx creado.
+2024-03-05 15:40:06,020 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_SANTA LUCIA.xlsx creado.
+2024-03-05 15:40:06,908 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_SAN ANTERITO.xlsx creado.
+2024-03-05 15:40:07,767 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_CANALETE.xlsx creado.
+2024-03-05 15:40:08,741 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_CARRISAL.xlsx creado.
+2024-03-05 15:40:09,672 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_04-03-2024_LOS CORDOBAS.xlsx creado.
+2024-03-05 15:40:11,162 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-03-05 15:40:13,387 - INFO - Correo enviado a reomir.negrete@record.com.co, jhovanna.lopez@record.com.co, kevis.mercado@record.com.co
+2024-03-05 15:40:13,401 - INFO - Archivos copiados en GDrive y carpeta Email
+2024-03-05 15:40:13,402 - INFO - Bot_Auditoría_BD_Python Finalizado.
+2024-03-05 15:40:13,402 - INFO - Tiempo total de ejecución: 25.31697654724121

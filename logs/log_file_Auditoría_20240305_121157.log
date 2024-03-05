@@ -1,0 +1,8 @@
+2024-03-05 12:11:57,110 - INFO - Bot_Auditoría_BD_Python iniciado
+2024-03-05 12:11:57,111 - INFO - Variables inicializadas
+2024-03-05 12:11:57,123 - INFO - Carpeta email eliminada
+2024-03-05 12:11:58,048 - ERROR - Error al conectarse a la base de datos
+2024-03-05 12:11:58,450 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-03-05 12:11:59,202 - ERROR - Correo enviado a soporte.rpa@record.com.co, jesus.suarez@record.com.co, reomir.negrete@record.com.co
+2024-03-05 12:11:59,229 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-03-05 12:11:59,759 - INFO - Correo enviado a jesus.suarez@record.com.co, carlos.perez@record.com.co
