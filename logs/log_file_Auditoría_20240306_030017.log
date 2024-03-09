@@ -1,0 +1,29 @@
+2024-03-06 03:00:17,333 - INFO - Bot_Auditoría_BD_Python iniciado
+2024-03-06 03:00:17,334 - INFO - Variables inicializadas
+2024-03-06 03:00:17,357 - INFO - Carpeta email eliminada
+2024-03-06 03:00:18,058 - INFO - Conectado a la base de datos
+2024-03-06 03:00:18,060 - INFO - Carpeta Email creda con exito
+2024-03-06 03:00:19,183 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_MONTELIBANO.xlsx creado.
+2024-03-06 03:00:20,149 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_TIERRA-ALTA.xlsx creado.
+2024-03-06 03:00:21,055 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_AYAPEL.xlsx creado.
+2024-03-06 03:00:22,104 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_PLANETA-RICA.xlsx creado.
+2024-03-06 03:00:23,371 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_CERETE.xlsx creado.
+2024-03-06 03:00:24,561 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_LORICA.xlsx creado.
+2024-03-06 03:00:25,829 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_SAHAGUN.xlsx creado.
+2024-03-06 03:00:26,856 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_MOCARI.xlsx creado.
+2024-03-06 03:00:28,035 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_PRADERA.xlsx creado.
+2024-03-06 03:00:29,183 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_MOGAMBO.xlsx creado.
+2024-03-06 03:00:30,278 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_GRANJA.xlsx creado.
+2024-03-06 03:00:31,369 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_DORADO.xlsx creado.
+2024-03-06 03:00:32,704 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_OFIC.PRINCIPAL MONTERIA.xlsx creado.
+2024-03-06 03:00:33,597 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_PUERTO ESCONDIDO.xlsx creado.
+2024-03-06 03:00:34,504 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_SANTA LUCIA.xlsx creado.
+2024-03-06 03:00:35,411 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_SAN ANTERITO.xlsx creado.
+2024-03-06 03:00:36,293 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_CANALETE.xlsx creado.
+2024-03-06 03:00:37,188 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_CARRISAL.xlsx creado.
+2024-03-06 03:00:38,098 - INFO - Archivo: C:/Users/RPA/Documents/Proyectos_Rocketbot/Bot Auditoria/Insumos/Auditoria_Python/Email/Auditoría_05-03-2024_LOS CORDOBAS.xlsx creado.
+2024-03-06 03:00:40,262 - INFO - file_cache is only supported with oauth2client<4.0.0
+2024-03-06 03:00:42,712 - INFO - Correo enviado a berthy.petro@record.com.co, mario.martinez@record.com.co, auditplay@record.com.co
+2024-03-06 03:00:42,723 - INFO - Archivos copiados en GDrive y carpeta Email
+2024-03-06 03:00:42,724 - INFO - Bot_Auditoría_BD_Python Finalizado.
+2024-03-06 03:00:42,724 - INFO - Tiempo total de ejecución: 25.390696048736572
